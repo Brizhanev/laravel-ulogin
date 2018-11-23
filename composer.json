@@ -13,10 +13,6 @@
         "php": ">=7.0.0"
     },
     "autoload": {
-        "classmap": [
-            "src/controllers",
-            "src/models"
-        ],
         "psr-4": {
             "Brizhanev\\LaravelUlogin\\": "src"
         }
