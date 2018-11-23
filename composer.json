@@ -17,8 +17,8 @@
             "src/controllers",
             "src/models"
         ],
-        "psr-0": {
-            "Brizhanev\\LaravelUlogin": "src/"
+        "psr-4": {
+            "Brizhanev\\LaravelUlogin\\": "src"
         }
     },
     "minimum-stability": "dev",
