@@ -9,6 +9,18 @@
             "email": "mr.brizhanev@yandex.ru"
         }
     ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/controllers",
+            "src/models"
+        ],
+        "psr-0": {
+            "Brizhanev\\LaravelUlogin": "src/"
+        }
+    }
     "minimum-stability": "dev",
     "require": {}
 }
