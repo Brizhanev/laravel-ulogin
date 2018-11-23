@@ -20,7 +20,7 @@
         "psr-0": {
             "Brizhanev\\LaravelUlogin": "src/"
         }
-    }
+    },
     "minimum-stability": "dev",
     "require": {}
 }
