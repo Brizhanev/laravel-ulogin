@@ -1,0 +1,14 @@
+{
+    "name": "brizhanev/laravel-ulogin",
+    "description": "The package adds ability to authorize via social networks with Ulogin in Laravel 5+ projects.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleg Brizhanev",
+            "email": "mr.brizhanev@yandex.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
