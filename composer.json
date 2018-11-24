@@ -11,13 +11,23 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "laravelcollective/html": "5.5.*"
+        "laravelcollective/html": "^5.4.0"
     },
     "autoload": {
+        "classmap":[
+            "src/controllers",
+            "src/models"
+        ],
         "psr-4": {
             "Brizhanev\\LaravelUlogin\\": "src"
         }
     },
     "minimum-stability": "dev",
-    "require": {}
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Brizhanev\\LaravelUlogin\\LaravelUloginServiceProvider"
+            ]
+        }
+    }
 }

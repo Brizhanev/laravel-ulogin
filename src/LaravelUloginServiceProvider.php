@@ -15,6 +15,8 @@ class LaravelUloginServiceProvider extends ServiceProvider {
 
     $this->setupMigrations();
 
+    $this->setupViews();
+
     $this->setupFormMacro();
 
   }
@@ -33,12 +35,16 @@ class LaravelUloginServiceProvider extends ServiceProvider {
     $this->loadMigrationsFrom(__DIR__ . '/migrations');
   }
 
+  private function setupViews() {
+    $this->loadViewsFrom(__DIR__ . '/views', 'laravel-ulogin');
+  }
+
   private function setupFormMacro() {
 
     app('form')->macro('uLogin', function($options = array()) {
 
       if (Auth::check()) {
-        return view(app('config')->get('laravel-ulogin.views.logged'),  [ 'user' => Auth::user() ]);
+        return view(app('config')->get('laravel-ulogin.views.logged'),  [ 'name' => Auth::user() ]);
       }
       
       if (!isset($options['mode'])) {
@@ -50,6 +56,7 @@ class LaravelUloginServiceProvider extends ServiceProvider {
       $mergedOptions = ['options' => array_merge($configOptions, $options)];
 
       $options = $mergedOptions['options'][$options['mode']];
+      $options['redirect_uri'] = route('laravel-ulogin');
 
       $data_ulogin = str_replace('%2C', ',', http_build_query($options, '', ';'));
 
