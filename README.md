@@ -19,7 +19,6 @@ laravel-ulogin Laravel Package
 ------------
 
 `composer require brizhanev/laravel-ulogin`
-```
 
 `php artisan vendor:publish`
 
